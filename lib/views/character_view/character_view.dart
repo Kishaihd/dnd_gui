@@ -1,3 +1,4 @@
+//import 'package:angular2/core.dart';
 import 'package:angular2/angular2.dart';
 import 'package:polymer_elements/iron_flex_layout/classes/iron_flex_layout.dart';
 import 'package:polymer_elements/iron_icons.dart';
@@ -27,61 +28,16 @@ import '../../model/entity.dart';
 //import '../../model/trait.dart';
 
 
-
 @Component(
-    selector: 'main-app',
-    encapsulation: ViewEncapsulation.Native,
-    directives: const [AbilitiesView],
-    templateUrl: 'main_app.html'
+    selector: 'character-view',
+    template: '''
+      <h1>{{name}}</h1>
+      <h2>{{cClass}}</h2>
+      <h2>{{cRace}}</h2>
+    '''
 )
-
-
-class MainApp {
-  //Stats stats;
-  //String name;
+class AppComponent {
   Entity newCharacter = new Entity();
-
-  bool done;
-  String message;
-
-  MainApp() {
-    reset();
-  }
-
-  void reset() {
-    //stats = new Stats();
-    done = false;
-  }
-
-//  void setStat(String st, int val) {
-//    stats.abilities.forEach((k, v) {
-//      if (k == st) {
-//        v = val;
-//        return v;
-//      }
-//      else {
-//        return -1;
-//      }
-//    });
-//    done = checkForDone();
-//  }
-
-//  bool checkForDone() {
-//    int done = 1;
-//    if (stats.hitPoints <= 0) {
-//      done = stats.hitPoints;
-//    }
-//    stats.abilities.forEach((k, v) {
-//      if (v <= 0) {
-//        done = v;
-//      }
-//    });
-//    if (done > 0) {
-//      return true;
-//    }
-//    else {
-//      return false;
-//    }
-//  }
-
+  String name = newCharacter.name;
+  String myHero = 'Windstorm';
 }

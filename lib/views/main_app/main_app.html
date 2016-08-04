@@ -15,16 +15,21 @@
 </style>
 
 <paper-header-panel class="fit">
+    <div class="layout vertical center content"></div>
+
     <paper-toolbar>
         <div class="flex-auto">
             <div styel="width: 30px; height: 30px;"></div>
         </div>
         <h2 class="app-title flex-auto">Character</h2>
-        <!--abilities-view ></abilities-view-->
         <div class="flex-auto" style="text-align: right">
             <paper-icon-button icon="refresh" (click)="generate()"></paper-icon-button>
         </div>
     </paper-toolbar>
 
-    <div class="layout vertical center content"></div>
+    <character-view charatcer="{{newCharacter}}">
+
+
+    </character-view>
+
 </paper-header-panel>
