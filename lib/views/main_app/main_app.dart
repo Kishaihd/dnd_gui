@@ -39,7 +39,7 @@ import '../../model/entity.dart';
 class MainApp {
   //Stats stats;
   //String name;
-  Entity newCharacter = new Entity();
+  @Input() Entity newCharacter = new Entity();
 
   bool done;
   String message;
