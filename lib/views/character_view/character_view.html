@@ -1,31 +1,33 @@
 <style>
-  .content {
-    padding: 15px;
+  .square {
+    outline: 1px solid black;
+    cursor: default;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
 
-  .app-title {
-    text-align: center;
+  .highlight {
+    background-color: lightblue;
   }
-
-  .stat-box {
-    margin: 5px;
-  }
-
-
 </style>
 
-<div>
+
+<div> Character View!
   <div class="layout vertical center content"></div>
 
-  <paper-badge>
+  <paper-card>
     <div class="flex-auto">
-      <div styel="width: 30px; height: 30px;"></div>
+      <div style="width: 30px; height: 30px;"></div>
     </div>
-    <h2 class="app-title flex-auto">Character</h2>
+    <h2 class="app-title flex-auto">Name</h2>
     <div class="flex-auto" style="text-align: right">
-      <paper-icon-button icon="refresh" (click)="generate()"></paper-icon-button>
+      <abilities-view [abList]="model.abilitiesList"></abilities-view>
     </div>
-  </paper-badge>
+  </paper-card>
 </div>
 
 

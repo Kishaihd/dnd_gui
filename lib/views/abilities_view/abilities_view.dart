@@ -8,7 +8,7 @@ import '../../model/global.dart';
 //import '../../model/entity.dart';
 import '../../model/ability.dart';
 import '../../views/ability_view/ability_view.dart';
-import '../../model/newCharacter.dart';
+//import '../../model/newCharacter.dart';
 import 'package:polymer_elements/paper_toast.dart';
 
 // To use!
@@ -22,7 +22,7 @@ import 'package:polymer_elements/paper_toast.dart';
     templateUrl: 'abilities_view.html'
 )
 class AbilitiesView {
-  //List<Ability> abList = newCharacter.abilitiesList;
+  List<Ability> abList; // = newCharacter.abilitiesList;
 
   PaperToast pt;
 
@@ -38,10 +38,7 @@ class AbilitiesView {
 
   void randStats(Event event, var detail, Element target) {
     log.info("$runtimeType::randStat()");
-//    abList.forEach((Ability ab) {
-//      ab.setAbilityScore(ab.roll());
-//    });
-    newCharacter.abilities.forEach((Ability ab) {
+    abList.forEach((Ability ab) {
       ab.setAbilityScore(ab.roll());
     });
   }

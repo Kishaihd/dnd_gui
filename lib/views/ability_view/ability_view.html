@@ -5,14 +5,14 @@
         width: 50px;
     }
 
-    ability-box {
+    #ability-box {
         padding: 2px;
     }
 </style>
 
-<div>{{ability.name}}</div>
-<paper-input id="ability-box" pattern="^[0-9].*" value="{{abilityScore}}">
-    <div>{{ability.score}}</div>
+<div>{{name}} Ability View!</div>
+<paper-input id="ability-box"> <!-- pattern="^[0-9].*" value="{{abilityScore}}"-->
+    <div>{{score}}</div>
 </paper-input>
 
 <!--script type="application/dart" src="ability_view.dart"></--script-->

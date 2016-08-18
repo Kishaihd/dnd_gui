@@ -8,6 +8,7 @@ import 'package:polymer_elements/paper_icon_button.dart';
 /// Are all of these Unnecessary?
 //import '../../views/ability_view/ability_view.dart';
 import '../../views/abilities_view/abilities_view.dart';
+import '../../views/character_view/character_view.dart';
 import '../../model/newCharacter.dart';
 //import '../../model/ability.dart';
 //import '../../model/alignment.dart';
@@ -31,7 +32,7 @@ import '../../model/entity.dart';
 @Component(
     selector: 'main-app',
     encapsulation: ViewEncapsulation.Native,
-    directives: const [AbilitiesView],
+    directives: const [AbilitiesView, CharacterView],
     templateUrl: 'main_app.html'
 )
 
@@ -39,16 +40,17 @@ import '../../model/entity.dart';
 class MainApp {
   //Stats stats;
   //String name;
-  @Input() Entity newCharacter = new Entity();
+  //@Input() Entity newCharacter; //= new Entity();
 
   bool done;
   String message;
 
   MainApp() {
-    reset();
+    generate();
   }
 
-  void reset() {
+  void generate() {
+    //newCharacter = new Entity();
     //stats = new Stats();
     done = false;
   }

@@ -1,5 +1,6 @@
 import 'package:angular2/angular2.dart';
 //import 'dart:html';
+import 'package:polymer_elements/paper_input.dart';
 import 'package:polymer/polymer.dart';
 import '../../model/ability.dart';
 import '../../model/newCharacter.dart';
@@ -12,16 +13,16 @@ import '../../model/global.dart';
     templateUrl: 'ability_view.html'
 )
 class AbilityView {
-  Ability ability;
+  @Input() Ability ability;
 
-  String abilityScore;
-  int score;
+  @Input() String name;
+  @Input() int score;
 
   //abilityScore = (ability.score == null ? 0 : ability.score).toString();
 
   AbilityView() {
-    if (abilityScore != null) {
-      ability = new Ability(abilityScore);
+    if (name != null) {
+      ability = new Ability(name);
     }
     if (score != null && score > 0) {
       ability.setAbilityScore(score);

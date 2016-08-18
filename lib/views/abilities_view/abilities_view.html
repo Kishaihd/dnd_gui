@@ -1,9 +1,33 @@
-
-
 <style>
+    .square {
+        outline: 1px solid black;
+        cursor: default;
+        box-sizing: border-box;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
 
+    .highlight {
+        background-color: lightblue;
+    }
 </style>
 
-<paper-card heading="Abilities">
+
+<!--paper-card heading="Abilities">Abilities View!
     <ability-view *ngFor="let ability of newCharacter.abilities" [ability]="ability"></ability-view>
-</paper-card>
+</paper-card-->
+
+<paper-material elevation="1" class="layout horizontal wrap"> <!-- [style.width.px]="boardSize"-->
+    <!--div *ngFor="let ability of model.abilitiesList"
+         class="square layout vertical center center-justified">
+        {{ability}}
+    </div-->
+    <ability-view *ngFor="let ability of abList"
+                  [ability]="ability"
+                  [name]="ability.name"
+                  [score]="ability.score">
+    </ability-view>
+</paper-material>
